@@ -15,8 +15,7 @@
 % data(:,3)=Tmin;    % daily minimum temperature
 % data(:,4)=VPD;     % VPD
 % data(:,5)=TA;      % temperature
-% data(:,6)=VPD;     % VPD
-% data(:,7)=CO2;     % Atmospheric CO2 concentration
+% data(:,6)=CO2;     % Atmospheric CO2 concentration
 
 % latlon_time(:,1)=lat;      %latitude
 % latlon_time(:,2)=lon;      %longitude
@@ -27,3 +26,4 @@
 
 
 GPP=RTL_LUE_Hour(data,para,latlon_time);   % GPP calculation
+
