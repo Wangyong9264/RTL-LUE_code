@@ -13,17 +13,13 @@ sun_angle=2*pi*t/365.2422;
 dec=0.3723+23.2567*sin(sun_angle)+0.1149*sin(2*sun_angle)-0.1712*sin(3*sun_angle)-0.758*cos(sun_angle)+0.3656*cos(2*sun_angle)+0.0201*cos(3*sun_angle);
 Eq = 0.0028-1.9857*sin(sun_angle)+9.9059*sin(2*sun_angle)-7.0924*cos(sun_angle)-0.6882*cos(2*sun_angle);
 TimeZone=(lon./abs(lon)).*round(abs(lon)./15);
-
 dlon = lon - TimeZone*15.0;
 dlon(lon<0) = TimeZone*15.0- lon;
-
 Local_Time = (hour+min/60+dlon/15+Eq/60);
 hour_angle = (Local_Time-12)*15;
-
 dec = deg2rad(dec);
 hour_angle = deg2rad(hour_angle);
 lat=deg2rad(lat);
-
 cosza=sin(lat).*sin(dec)+cos(lat).*cos(dec).*cos(hour_angle);
 cosza(cosza<0)=0;
 end
