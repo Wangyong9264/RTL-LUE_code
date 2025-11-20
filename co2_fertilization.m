@@ -1,7 +1,7 @@
 function [Cs]=co2_fertilization(data)
+vpd=data(:,4);   % VPD
 t=data(:,5);     % temperature
-vpd=data(:,6);   % VPD
-Ca=data(:,7);    % Atmospheric CO2 concentration
+Ca=data(:,6);    % Atmospheric CO2 concentration
 
 Rgas=8.314;
 ita=0.8903;
@@ -15,4 +15,5 @@ kesi=sqrt(356.51*K/(1.6*ita));
 gamma=kesi/(kesi+sqrt(vpd));
 Ci=Ca*gamma;
 Cs=(Ci-fi)/(Ci+2*fi);
+
 end
