@@ -13,7 +13,7 @@
 % data(:,1)=PAR;     % photosynthetically active radiation, approximately*SWR
 % data(:,2)=LAI;     % filtered LAI
 % data(:,3)=Tmin;    % daily minimum temperature
-% data(:,4)=VPDdt;   % day time mean VPD
+% data(:,4)=VPD;     % VPD
 % data(:,5)=TA;      % temperature
 % data(:,6)=VPD;     % VPD
 % data(:,7)=CO2;     % Atmospheric CO2 concentration
@@ -24,5 +24,6 @@
 % latlon_time(:,4)=Jday;     % Julian day, 365 or 366 days.
 % latlon_time(:,5)=hour;     % hour, 24 hours.
 % latlon_time(:,6)=minute;   % minute, 60 minutes.
+
 
 GPP=RTL_LUE_Hour(data,para,latlon_time);   % GPP calculation
