@@ -24,6 +24,4 @@
 % latlon_time(:,5)=hour;     % hour, 24 hours.
 % latlon_time(:,6)=minute;   % minute, 60 minutes.
 
-
 GPP=RTL_LUE_Hour(data,para,latlon_time);   % GPP calculation
-
